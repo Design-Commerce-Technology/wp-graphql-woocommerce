@@ -42,6 +42,7 @@ class Root_Query {
 
 						$cart = Factory::resolve_cart();
 						if ( ! empty( $args['recalculateTotals'] ) && $args['recalculateTotals'] ) {
+							$cart->calculate_shipping();
 							$cart->calculate_totals();
 						}
 
